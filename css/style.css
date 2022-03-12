@@ -81,6 +81,22 @@ img {
     margin-top: 96px;
 }
 
+/* Footer */
+footer {
+  margin: 15rem 0rem 1rem 0rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: center;
+
+  color: #a9a9a9;
+}
+
 
 
 .grow {
