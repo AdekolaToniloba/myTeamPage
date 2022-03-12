@@ -5,7 +5,7 @@
 }
 
 .container {
-    margin: 110px 240px 0 240px;
+    margin: 110px 240px 90px 240px;
 }
 
 .heading {
@@ -36,22 +36,24 @@ h3 {
 h4 {
     writing-mode: vertical-lr;
     margin-left: 5px;
-    font-style: 12px;
+    font-size: 12px;
     font-weight: 400;
     font-family: 'PT Serif', serif;
 }
 
 p {
     margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;     
 }
 
 .card{
-    background-color: #fff;
-    color: #333;
+    /* background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,  0, 0, 0.2);
-    padding: 20px;
-    margin: 10px; 
+    padding: 10px;
+    margin: 15px;  */
     display: flex;
  }
 
@@ -59,12 +61,13 @@ p {
 img {
     width: 235px;
     height: 348px;
+    margin-bottom: 5px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 55 99;
+    /* gap: 55 99; */
     margin-top: 96px;
 }
 
@@ -72,10 +75,104 @@ img {
     margin-top: 96px;
 }
 
+
+
 .grid-container>*:nth-child(5){
     margin-top: 96px;
 }
 
-.grid-container>*:first-child{
-    display: flex;
+
+
+.grow {
+    transition: all 0.2s ease-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+    /* background-color: #333;
+    color: #fff; */
+}
+
+/* Media Queries */
+/* Tablets */
+@media(max-width: 968px) {
+    .container {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    img {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    
+
+    .container {
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 70px;
+    }
+
+   .card h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        margin-left: 5px;
+        font-size: 10px;
+        font-weight: 400;
+        font-family: 'PT Serif', serif;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25 59;
+        margin-top: 96px;
+    }
+
+    img {
+        width: 135px;
+        height: 248px;
+    }
+
+    .card {
+        margin: 5px;
+        /* padding: 5px; */
+    }
+
+    .heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        padding-top: 15px;
+    }
+
+    .grid-container{
+        margin-top: 50px;
+    }
+
+    .grid-container .grid-item>*:nth-child(2){
+        margin-top: 50px;
+    }
+
+    .grid-container>*:nth-child(4){
+        margin-top: 50px;
+    }
+    
+    .grid-container>*:nth-child(5){
+        margin-top: 0;
+    }
+    .grid-container>*:nth-child(6){
+        margin-top: 50px;
+    }
 }
